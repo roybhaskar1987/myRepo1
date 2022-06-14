@@ -9,56 +9,50 @@ import org.springframework.stereotype.Component;
 @Component
 public class TaskSchedulerGemini {
 	
-	/*
-	 * @Scheduled (cron = "0 0/05 * * * ?" )
-	 * 
-	 * @Async public void print100() {
-	 * 
-	 * for(int i=0; 0<=50; i++) { System.out.println("M1");
-	 * System.out.println("Thread Name" + Thread.currentThread().getName());
-	 * 
-	 * 
-	 * }
-	 * 
-	 * 
-	 * }
-	 * 
-	 * 
-	 * @Scheduled (cron = "0 0/03 * * * ?" )
-	 * 
-	 * @Async public void print101() {
-	 * 
-	 * for(int i=0; 0<=10; i++) { System.out.println("M2");
-	 * System.out.println("Thread Name" + Thread.currentThread().getName());
-	 * 
-	 * 
-	 * }
-	 * 
-	 * 
-	 * 
-	 * 
-	 * }
-	 * 
-	 * //@Scheduled ( fixedDelay = 200 )
-	 * 
-	 * @Scheduled ( initialDelay = 100, fixedDelayString = "${gemini.schedule.time}"
-	 * )
-	 * 
-	 * @Async public void print102() {
-	 * 
-	 * for(int i=0; 0<=20; i++) { System.out.println("M3");
-	 * 
-	 * System.out.println("Thread Name" + Thread.currentThread().getName());
-	 * 
-	 * 
-	 * }
-	 * 
-	 * }
-	 * 
-	 * 
-	 */			
-			//@Scheduled ( initialDelay = 100, fixedDelayString = "${gemini.schedule.time}" )
-			@Scheduled ( initialDelay = 100, fixedRateString  = "${gemini.schedule.time}" )
+	
+	  @Scheduled (cron = "0 0/05 * * * ?" )
+	   @Async 
+	  public void print100() {
+	 	  for(int i=0; 0<=300; i++) { System.out.println("M1");
+	  System.out.println("Thread Name" + Thread.currentThread().getName());
+	  
+	  
+	  }
+	  
+	  
+	  }
+	  
+	  
+	  @Scheduled (cron = "0 0/03 * * * ?" )
+	  
+	  @Async public void print101() {
+	  
+	  for(int i=0; 0<=300; i++) { System.out.println("M2");
+	  System.out.println("Thread Name" + Thread.currentThread().getName());
+	  
+	  
+	  }
+	  
+	  
+	  }
+	  
+	  
+
+	  
+	  
+	  @Async public void print102() {
+	  
+	  for(int i=0; 0<=20; i++) { System.out.println("M3");
+	  
+	  System.out.println("Thread Name" + Thread.currentThread().getName());
+	  
+	  
+	  }
+	  
+	  }
+	 			
+			//@Scheduled ( initialDelay = 100 , fixedDelayString = "${gemini.schedule.time}" )
+			//@Scheduled ( initialDelay = 100, fixedRateString  = "${gemini.schedule.time}" )
 			//@Async
 			public void demoThread() {
 				
